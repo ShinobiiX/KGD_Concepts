@@ -1,0 +1,113 @@
+/* ==========================================================================
+   APPROACH ("BUILT WITH INTENTION") STYLES
+   ========================================================================== */
+
+.approach-section {
+  background-color: var(--bg-dark);
+  position: relative;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.approach-header {
+  margin-bottom: 56px;
+}
+
+.approach-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 900px) {
+  .approach-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.approach-card {
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.approach-card:hover {
+  border-color: var(--border-lime);
+  background: var(--surface-2);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 30px rgba(180, 240, 0, 0.08);
+}
+
+.card-ambient-glow {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(180, 240, 0, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.approach-card:hover .card-ambient-glow {
+  opacity: 1;
+}
+
+.approach-num-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.approach-num {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--lime-primary);
+  letter-spacing: 0.05em;
+}
+
+.approach-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-xs);
+  background: rgba(180, 240, 0, 0.08);
+  border: 1px solid var(--border-lime-subtle);
+  color: var(--lime-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.approach-card-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+
+.approach-quote {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--lime-hover);
+  line-height: 1.45;
+  margin-bottom: 18px;
+  border-left: 2px solid var(--lime-primary);
+  padding-left: 14px;
+}
+
+.approach-desc {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.68;
+}
